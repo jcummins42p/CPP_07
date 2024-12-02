@@ -6,7 +6,7 @@
 /*   By: jcummins <jcummins@student.42prague.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 17:44:19 by jcummins          #+#    #+#             */
-/*   Updated: 2024/12/02 12:47:12 by jcummins         ###   ########.fr       */
+/*   Updated: 2024/12/02 13:59:49 by jcummins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,35 @@ template <typename T>
 void printItem( T *x )
 {
 	std::cout << *x << std::endl;
+}
+
+template <typename T>
+bool isSorted(T *arr, size_t arrlen)
+{
+	if (!arr || arrlen > MAX_VAL)
+		throw( std::exception() ) ;
+	for (size_t i = 0; i + 1 < arrlen; i++) {
+		if (arr[i] != arr[i + 1] && max(arr[i], arr[i + 1]) == arr[i]) {
+			std::cout << "Not Sorted" << std::endl;
+			return (false);
+		}
+	}
+	std::cout << "Already Sorted" << std::endl;
+	return (true);
+}
+
+template <typename T>
+void reverseArray(T *arr, size_t arrlen)
+{
+	size_t i = 0;
+	size_t j = arrlen - 1;
+
+	while (i < j)
+	{
+		T tmp = arr[i];
+		arr[i++] = arr[j];
+		arr[j--] = tmp;
+	}
 }
 
 template <typename T>
