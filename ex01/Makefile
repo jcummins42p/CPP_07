@@ -6,7 +6,7 @@
 #    By: jcummins <jcummins@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/26 18:08:59 by jcummins          #+#    #+#              #
-#    Updated: 2024/11/28 13:33:18 by jcummins         ###   ########.fr        #
+#    Updated: 2024/12/02 11:45:27 by jcummins         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,10 +15,9 @@ NAME = iter
 CXX = c++
 CXXFLAGSS = -g -Werror -Wextra -Wall -pedantic -std=c++98
 
-SRCS = main.cpp \
-	   ScalarConverter.cpp
+SRCS = main.cpp
 OBJS = $(SRCS:%.cpp=%.o)
-HEADS = ScalarConverter.hpp
+HEADS = iter.hpp
 
 all: $(NAME)
 
