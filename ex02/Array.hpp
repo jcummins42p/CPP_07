@@ -6,7 +6,7 @@
 /*   By: jcummins <jcummins@student.42prague.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 17:44:19 by jcummins          #+#    #+#             */
-/*   Updated: 2024/12/02 13:23:00 by jcummins         ###   ########.fr       */
+/*   Updated: 2024/12/02 15:36:29 by jcummins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,50 +15,74 @@
 
 # define MAX_VAL 255
 
-//template <typename T>
-//class Array
-//{
-	//public:
-		//Array ( void );
-		//Array ( unsigned int n );
-		//Array ( const Array &other );
-		//Array &operator= ( const Array &other );
-		//~Array ( void );
-
-		////Array &operator[] ( void );
-
-		//unsigned int size ( void ) const;
-	//private:
-		//T items[];
-//} ;
+# include <iostream>
 
 template <typename T>
-const T	&max(const T &x, const T &y)
+class Array
 {
+	public:
+		Array ( void ) : _size(0) {};
+		Array ( unsigned int n ) : _size(n), _items(new T[n]) {};
+		Array ( const Array &other ) : _size(other.size()), _items(new T[other.size()])
+		{
+			for (unsigned int i = 0; i < other.size(); i++) {
+				_items[i] = other[i];
+			}
+		};
+		Array &operator= ( const Array &other )
+		{
+			for (unsigned int i = 0; i < other.size(); i++) {
+				_items[i] = other[i];
+			}
+		};
+		~Array ( void ) { delete [] _items; };
+
+		T &operator[] ( const unsigned int &i ) {
+			if (i > _size)
+				throw OutOfBoundsException();
+			return _items[i];
+		};
+		const T &operator[] ( const unsigned int &i ) const {
+			if (i > _size)
+				throw OutOfBoundsException();
+			return _items[i];
+		};
+
+		unsigned int size ( void ) const { return _size; };
+
+		class OutOfBoundsException : public std::exception {
+			public:
+				const char * what( void ) const throw() {
+					return ("Index out of bounds");
+				}
+		} ;
+	private:
+		unsigned int _size;
+		T 			*_items;
+} ;
+
+template <typename T>
+T	max(const T &x, const T &y) {
 	return (x > y ? x : y);
 }
 
 template <typename T>
-const T	&min(const T &x, const T &y)
-{
+T	min(const T &x, const T &y) {
 	return (x < y ? x : y);
 }
 
 template <typename T>
-void decrementValue(T *x)
-{
+void decrementValue(T *x) {
 	(*x)--;
 }
 
 template <typename T>
-void incrementValue(T *x)
-{
+void incrementValue(T *x) {
 	(*x)++;
 }
 
 template <typename T>
-void doubleValue(T *x)
-{
+void doubleValue(T *x) {
 	*x = *x * 2;
 }
 
