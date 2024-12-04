@@ -1,0 +1,48 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/nfs/homes/jcummins/Projects/CPP_07/ex02/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+$(NAME)	Makefile	/^$(NAME): $(OBJS)$/;"	t
+%.o	Makefile	/^%.o: %.cpp $(HEADS)$/;"	t
+ARRAY_HPP	Array.hpp	/^# define ARRAY_HPP$/;"	d
+Array	Array.hpp	/^		Array ( const Array &other ) : _size(other.size()), _items(new T[other.size()])$/;"	f	class:Array
+Array	Array.hpp	/^		Array ( unsigned int n ) : _size(n), _items(new T[n]) {};$/;"	f	class:Array
+Array	Array.hpp	/^		Array ( void ) : _size(0) {};$/;"	f	class:Array
+Array	Array.hpp	/^class Array$/;"	c
+CXX	Makefile	/^CXX = c++$/;"	m
+HEADS	Makefile	/^HEADS = Array.hpp$/;"	m
+MAX_VAL	Array.hpp	/^# define MAX_VAL /;"	d
+NAME	Makefile	/^NAME = array$/;"	m
+OBJS	Makefile	/^OBJS = $(SRCS:%.cpp=%.o)$/;"	m
+OutOfBoundsException	Array.hpp	/^		class OutOfBoundsException : public std::exception {$/;"	c	class:Array
+SRCS	Makefile	/^SRCS = main.cpp$/;"	m
+_items	Array.hpp	/^		T 			*_items;$/;"	m	class:Array	typeref:typename:T *
+_size	Array.hpp	/^		unsigned int _size;$/;"	m	class:Array	typeref:typename:unsigned int
+all	Makefile	/^all: $(NAME)$/;"	t
+bubbleSort	Array.hpp	/^void bubbleSort(T *arr, size_t arrlen)$/;"	f	typeref:typename:void
+clean	Makefile	/^clean:$/;"	t
+decrementValue	Array.hpp	/^void decrementValue(T *x) {$/;"	f	typeref:typename:void
+doubleValue	Array.hpp	/^void doubleValue(T *x) {$/;"	f	typeref:typename:void
+fclean	Makefile	/^fclean: clean$/;"	t
+halfValue	Array.hpp	/^void halfValue(T *x)$/;"	f	typeref:typename:void
+incrementValue	Array.hpp	/^void incrementValue(T *x) {$/;"	f	typeref:typename:void
+isSorted	Array.hpp	/^bool isSorted(T *arr, size_t arrlen)$/;"	f	typeref:typename:bool
+iter	Array.hpp	/^void iter(T *arr, size_t arrlen, void (*func)(T *x))$/;"	f	typeref:typename:void
+main	main.cpp	/^int main(int, char**)$/;"	f	typeref:typename:int
+max	Array.hpp	/^T	max(const T &x, const T &y) {$/;"	f	typeref:typename:T
+min	Array.hpp	/^T	min(const T &x, const T &y) {$/;"	f	typeref:typename:T
+operator =	Array.hpp	/^		Array &operator= ( const Array &other )$/;"	f	class:Array	typeref:typename:Array &
+operator [] 	Array.hpp	/^		T &operator[] ( const unsigned int &i ) {$/;"	f	class:Array	typeref:typename:T &
+operator [] 	Array.hpp	/^		const T &operator[] ( const unsigned int &i ) const {$/;"	f	class:Array	typeref:typename:const T &
+printItem	Array.hpp	/^void printItem( T *x )$/;"	f	typeref:typename:void
+re	Makefile	/^re:	fclean all$/;"	t
+size	Array.hpp	/^		unsigned int size ( void ) const { return _size; };$/;"	f	class:Array	typeref:typename:unsigned int
+what	Array.hpp	/^				const char * what( void ) const throw() {$/;"	f	class:Array::OutOfBoundsException	typeref:typename:const char *
+~Array	Array.hpp	/^		~Array ( void ) { delete [] _items; };$/;"	f	class:Array

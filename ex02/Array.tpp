@@ -6,7 +6,7 @@
 /*   By: jcummins <jcummins@student.42prague.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 17:44:19 by jcummins          #+#    #+#             */
-/*   Updated: 2024/12/02 15:36:29 by jcummins         ###   ########.fr       */
+/*   Updated: 2024/12/04 18:55:16 by jcummins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,12 @@ class Array
 		~Array ( void ) { delete [] _items; };
 
 		T &operator[] ( const unsigned int &i ) {
-			if (i > _size)
+			if (i >= _size)
 				throw OutOfBoundsException();
 			return _items[i];
 		};
 		const T &operator[] ( const unsigned int &i ) const {
-			if (i > _size)
+			if (i >= _size)
 				throw OutOfBoundsException();
 			return _items[i];
 		};
@@ -108,13 +108,6 @@ bool isSorted(T *arr, size_t arrlen)
 			return (false);
 	}
 	return (true);
-}
-
-template <typename T>
-void bubbleSort(T *arr, size_t arrlen)
-{
-	(void) arr;
-	(void) arrlen;
 }
 
 template <typename T>

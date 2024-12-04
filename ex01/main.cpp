@@ -6,12 +6,12 @@
 /*   By: jcummins <jcummins@student.42prague.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 11:44:48 by jcummins          #+#    #+#             */
-/*   Updated: 2024/12/02 14:01:46 by jcummins         ###   ########.fr       */
+/*   Updated: 2024/12/04 18:55:51 by jcummins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "iter.hpp"
+#include "iter.tpp"
 
 void	populateArray(int arr[], int arrsize)
 {
