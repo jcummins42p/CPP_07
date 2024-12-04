@@ -6,13 +6,13 @@
 /*   By: jcummins <jcummins@student.42prague.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 17:43:14 by jcummins          #+#    #+#             */
-/*   Updated: 2024/12/04 18:56:52 by jcummins         ###   ########.fr       */
+/*   Updated: 2024/12/04 19:02:15 by jcummins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <cstdlib> // for rand, srand, time
-#include "Array.tpp"
+#include "Array.hpp"
 
 int main(int, char**)
 {

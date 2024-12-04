@@ -6,7 +6,7 @@
 #    By: jcummins <jcummins@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/26 18:08:59 by jcummins          #+#    #+#              #
-#    Updated: 2024/12/04 18:56:01 by jcummins         ###   ########.fr        #
+#    Updated: 2024/12/04 19:03:01 by jcummins         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ CXXFLAGSS = -g -Werror -Wextra -Wall -pedantic -std=c++98
 
 SRCS = main.cpp
 OBJS = $(SRCS:%.cpp=%.o)
-HEADS = iter.tpp
+HEADS = iter.hpp
 
 all: $(NAME)
 
