@@ -6,7 +6,7 @@
 #    By: jcummins <jcummins@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/26 18:08:59 by jcummins          #+#    #+#              #
-#    Updated: 2024/12/02 11:15:30 by jcummins         ###   ########.fr        #
+#    Updated: 2024/12/16 13:51:42 by jcummins         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,8 @@ NAME = functions
 CXX = c++
 CXXFLAGSS = -g -Werror -Wextra -Wall -pedantic -std=c++98
 
-SRCS = main.cpp
+SRCS = main.cpp \
+	   #Awesome.cpp
 OBJS = $(SRCS:%.cpp=%.o)
 HEADS = templates.hpp
 

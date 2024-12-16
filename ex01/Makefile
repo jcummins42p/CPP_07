@@ -6,7 +6,7 @@
 #    By: jcummins <jcummins@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/26 18:08:59 by jcummins          #+#    #+#              #
-#    Updated: 2024/12/16 13:45:20 by jcummins         ###   ########.fr        #
+#    Updated: 2024/12/16 13:52:09 by jcummins         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,8 @@ NAME = iter
 CXX = c++
 CXXFLAGSS = -g -Werror -Wextra -Wall -pedantic -std=c++98
 
-SRCS = Awesome.cpp
+SRCS = main.cpp \
+	  #Awesome.cpp
 OBJS = $(SRCS:%.cpp=%.o)
 HEADS = iter.hpp
 
