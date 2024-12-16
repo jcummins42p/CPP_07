@@ -6,7 +6,7 @@
 /*   By: jcummins <jcummins@student.42prague.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 17:44:19 by jcummins          #+#    #+#             */
-/*   Updated: 2024/12/02 13:59:49 by jcummins         ###   ########.fr       */
+/*   Updated: 2024/12/16 13:44:59 by jcummins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,12 @@ void printItem( T *x )
 }
 
 template <typename T>
+void printItem( const T *x )
+{
+	std::cout << *x << std::endl;
+}
+
+template <typename T>
 bool isSorted(T *arr, size_t arrlen)
 {
 	if (!arr || arrlen > MAX_VAL)
@@ -97,6 +103,20 @@ void iter(T *arr, size_t arrlen, void (*func)(T *x))
 		if (! &arr[i])
 			throw( std::exception() );
 		(*func)(&arr[i]);
+	}
+}
+
+template <typename T>
+void iter(T *arr, size_t arrlen, void (*func)(const T &x))
+{
+	if (!arr || !func)
+		throw( std::exception() ) ;
+	if (arrlen > MAX_VAL)
+		throw( std::exception() ) ;
+	for (size_t i = 0; i < arrlen; i++) {
+		if (! &arr[i])
+			throw( std::exception() );
+		(*func)(arr[i]);
 	}
 }
 
